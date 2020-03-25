@@ -10,7 +10,9 @@
   <body>
     <div class="container">
       <img src="../static/logo.png" alt="Tesla" class="logo" />
-      <!-- @todo - message -->
+      {% if message %}
+      <p class="message">{{ message | safe }}</p>
+      {% endif %}
       <form action="/submit" method="POST">
         <div class="form-group">
           <h3>Customer Name</h3>
@@ -24,10 +26,10 @@
           <h3>Dealer</h3>
           <select name="dealer">
             <option value="">Select Dealer</option>
-            <opetion value="Tom Smith">Tom Smith</opetion>
-            <opetion value="Karen Swanson">Karen Swanson</opetion>
-            <opetion value="Jim Johnson">Jim Johnson</opetion>
-            <opetion value="Shauna Gifford">Shauna Gifford</opetion>
+            <option value="Tom Smith">Tom Smith</option>
+            <option value="Karen Swanson">Karen Swanson</option>
+            <option value="Jim Johnson">Jim Johnson</option>
+            <option value="Shauna Gifford">Shauna Gifford</option>
           </select>
         </div>
         <div class="form-group">
